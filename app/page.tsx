@@ -7,7 +7,7 @@ export default function FoodAllergenExtractor() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [results, setResults] = useState<ExtractionResult | null>(null);
+  const [results, setResults] = useState<any>(null);
   const [viewMode, setViewMode] = useState('table'); // 'table' or 'json'
 
   const allergensList = [
