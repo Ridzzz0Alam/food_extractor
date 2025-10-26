@@ -7,6 +7,8 @@ export default function FoodAllergenExtractor() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [results, setResults] = useState<any>(null);
   const [viewMode, setViewMode] = useState('table'); // 'table' or 'json'
 
@@ -239,8 +241,8 @@ export default function FoodAllergenExtractor() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 flex items-start gap-3">
             <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
             <div className="text-sm text-blue-800">
-              <p className="font-semibold mb-1">Demo Mode - Supports PDFs & Images</p>
-              <p>This demo simulates AI extraction with OCR capabilities. Upload food product labels as PDFs or images (JPG, PNG, WEBP). For production use with real OpenAI Vision API integration, deploy the backend API.</p>
+              <p className="font-semibold mb-1">Intelligent Food Label Analysis</p>
+              <p>This web application simulates AI extraction with OCR capabilities. Upload food product labels as PDFs or images (JPG, PNG, WEBP). It Instantly decodes the nutrition facts and allergen warnings from any food package. It also extracts critical health information, and presents it in a clean, searchable format. Perfect for dietary management, food safety compliance, and informed consumer choices.</p>
             </div>
           </div>
           
